@@ -59,7 +59,7 @@ body {
   padding: 10px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 2px -1px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px -1px rgba(0, 0, 0, 0.6);
 }
 
 .btn {
@@ -70,6 +70,25 @@ body {
   justify-content: center;
   padding: 8px;
   border-color: white;
-  text-shadow: 2px -0.8px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px -0.3px rgba(0, 0, 0, 0.6);
   color: white;
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    margin-left: 10px;
+  }
+
+  .container {
+    position: relative;
+    margin: 20% auto;
+  }
+
+  .container h2 {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .btn {
+    font-size: 15px;
+  }
 }
