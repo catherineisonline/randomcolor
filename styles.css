@@ -1,94 +1,130 @@
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 body {
   font-family: "Fira Sans", sans-serif;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: antiquewhite;
+  font-family: "Outfit", sans-serif;
 }
 
-.nav-center {
+/** Navigation **/
+
+nav {
   display: flex;
-  background-color: white;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
+  text-align: center;
   width: 100%;
-  max-width: 100%;
-  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.8);
 }
 
-.nav-center h1 {
-  padding: 10px;
-  color: slateblue;
+.rainbow {
+  margin: 0 auto;
+  width: 20%;
+  height: 20%;
+}
+.rainbow:hover {
+  width: 25%;
+  height: 25%;
+  transition: all 0.5s;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 2px black;
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   list-style: none;
-  color: white;
-  font-weight: bold;
   margin-left: 40%;
-  position: relative;
   cursor: pointer;
-  white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .nav-links li {
   padding: 10px;
-  text-decoration: none;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: indigo;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
-.centering {
+/** Main Container **/
+
+.main-container {
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 50%;
+  gap: 20px;
   justify-content: center;
-}
-
-.container {
-  position: relative;
-  margin: 10% auto;
-}
-
-.container h2 {
-  padding: 10px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 2px -1px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
 }
-
 .btn {
-  font-size: 20px;
-  width: 100%;
-  background-color: transparent;
-  border-radius: 2px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  width: 50%;
   justify-content: center;
-  padding: 8px;
-  border-color: white;
-  text-shadow: 1px -0.3px rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 25px;
+  border: 1px solid;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
   color: white;
 }
 
+.btn:hover {
+  box-shadow: -2px 5px 14px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 5px 14px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 5px 14px -3px rgba(0, 0, 0, 0.75);
+  font-size: 1.3rem;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/** Media Queries **/
+
 @media (max-width: 480px) {
+  .rainbow {
+    margin: 0 auto;
+    width: 30%;
+    height: 30%;
+  }
+  .rainbow:hover {
+    width: 30%;
+    height: 30%;
+  }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
   .nav-links {
-    margin-left: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.2rem;
   }
-
-  .container {
-    position: relative;
-    margin: 20% auto;
+  .main-container {
+    width: 90%;
   }
-
-  .container h2 {
-    padding: 10px;
-    font-size: 15px;
-  }
-  .btn {
-    font-size: 15px;
+  .main-container h2 {
+    font-size: 1.3rem;
   }
 }
+
